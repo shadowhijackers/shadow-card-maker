@@ -1,0 +1,35 @@
+$container-width: 425px;
+
+.my-app {
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #3d3d3d;
+  letter-spacing: .4px;
+  background: rgb(229 229 229);
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  background: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+    box-shadow: -0.1px 0.1px 5px 0px #d8d5d5, 0.1px 0.1px 5px 0px #dcdcdc;
+    -webkit-box-shadow: -0.1px 0.1px 5px 0px #d8d5d5, 0.1px 0.1px 5px 0px #dcdcdc;
+    -moz-box-shadow: -0.1px 0.1px 5px 0px #d8d5d5, 0.1px 0.1px 5px 0px #dcdcdc;
+  }
+
+  .my-app {
+    padding: 24px 0;
+  }
+}

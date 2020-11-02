@@ -1,0 +1,177 @@
+<ion-content>
+  <div class="my-app">
+    <div class="container">
+      <header class="header-block">
+        <div class="header-block__background"></div>
+
+        <section class="about">
+          <div class="about__header">
+            <div class="about__dp">
+              <img class="about__dp_img" src="assets/images/logo_1024x2024.png" alt="LOGO">
+            </div>
+
+            <div>
+              <h2 class="mat-display-1 about__display-1">GAME STREAMING</h2>
+              <h2 class="mat-headline about__headline">NAGARAJ R</h2>
+            </div>
+          </div>
+
+          <p>
+            Game streaming is the youtube channel for streaming Mobile games, PC games and Play station games.
+            We are from india and if you want to contact us you can contact through below details. Please subscribe our
+            channel by below website link.
+          </p>
+        </section>
+
+        <section class="contact-details-block">
+          <div>
+            <mat-icon class="call-icon icon">call</mat-icon>
+            <span>+91 8098992384</span>
+          </div>
+
+          <div>
+            <ion-icon class="icon-size whatsapp-icon icon" src="assets/icon/logo-whatsapp.svg"></ion-icon>
+            <span>+91 8098992384</span>
+          </div>
+
+          <div>
+            <mat-icon class="email-icon icon">email</mat-icon>
+            <span>shakthipav@gmail.com</span>
+          </div>
+
+          <div>
+            <mat-icon class="location-icon icon">location_on</mat-icon>
+            <span>No 2/16 TNHB colony, Avadi, Chennai 189273</span>
+          </div>
+
+          <div>
+            <mat-icon class="website-icon icon">language</mat-icon>
+            <span>https://www.youtube.com/user/shakthipav</span>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="gallery-images card">
+          <h1 class="mat-headline">GALLERY</h1>
+          <div class="gallery-images__block">
+            <img *ngFor="let item of  [1,2,3,4,5]" alt="image" class="gallery-images__image"
+                 src="assets/images/cover.png">
+          </div>
+        </section>
+
+        <section class="videos card">
+          <h1 class="mat-headline">VIDEOS</h1>
+          <iframe (load)="handleIFrameLoad($event)" class="videos__frame" width="98%" height="230"
+                  src="https://www.youtube.com/embed/O9kYMV-APzg" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </section>
+
+        <section class="location card">
+          <h1 class="mat-headline">LOCATION</h1>
+          <div id="sh-mapbox" shMapbox [options]="mapOptions" (mapReady)="getMapIns($event)"></div>
+          <address>No 2/16 TNHB colony, Avadi, Chennai 189273</address>
+          <a class="location__direction" href="javascript: void(0)" color="primary" mat-button>
+            <mat-icon>directions</mat-icon>
+            <span>Click here to direction</span>
+          </a>
+        </section>
+
+        <section class="contact card">
+          <h1 class="mat-headline">CONTACT US</h1>
+          <form [formGroup]="contactForm">
+            <div>
+              <mat-form-field class="contact__form-field" appearance="fill">
+                <mat-label>Your E-Mail</mat-label>
+                <input matInput type="email" placeholder="nom@exemple.fr" formControlName="from">
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field class="contact__form-field" appearance="fill">
+                <mat-label>Subject</mat-label>
+                <input matInput type="text" placeholder="Enter the subject" formControlName="subject" required>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field class="contact__form-field" appearance="fill">
+                <mat-label>Message</mat-label>
+                <textarea matInput type="text" placeholder="Enter the message" formControlName="message"
+                          required rows="4">
+                </textarea>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+
+            <div style="display: flex;flex-direction: row-reverse;width: 100%">
+              <ion-button color="primary">
+                <mat-icon class="email-icon icon mr-2">email</mat-icon>
+                Send Email
+              </ion-button>
+              <ion-button color="primary">
+                <ion-icon class="icon-size whatsapp-icon icon mr-2" src="assets/icon/logo-whatsapp.svg"></ion-icon>
+                Send Whatsapp
+              </ion-button>
+            </div>
+          </form>
+        </section>
+
+      </main>
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button>
+          <ion-icon src="assets/icon/share-24px.svg"></ion-icon>
+          <ion-label>SHARE</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon src="assets/icon/call-24px.svg"></ion-icon>
+          <ion-label>CALL</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon src="assets/icon/logo-whatsapp.svg"></ion-icon>
+          <ion-label>WHATSAPP</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon src="assets/icon/get_app-24px.svg"></ion-icon>
+          <ion-label>DOWNLOAD</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <footer class="footer">
+    <a href="javascript:void(0)" class="footer__caption"> &copy; SHADOW CARDS - <i>MADE IN INDIA</i></a>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-fab-button>
+
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-fab-button>
+
+        <ion-fab-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+
+        <ion-fab-button>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </footer>
+</ion-footer>
