@@ -79,11 +79,6 @@ $container-padding: 16px;
       letter-spacing: .6px;
     }
 
-    .icon-size {
-      width: 24px;
-      height: 24px;
-    }
-
     .icon {
       cursor: pointer;
     }
@@ -189,8 +184,4 @@ $container-padding: 16px;
   .ytp-chrome-top, .ytp-chrome-bottom {
     display: none !important;
   }
-}
-
-.mr-2{
-  margin-right: 4px;
 }
