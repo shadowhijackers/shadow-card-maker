@@ -1,4 +1,5 @@
 $container-width: 425px;
+$container-padding: 16px;
 
 .my-app {
   background-repeat: repeat;
@@ -14,6 +15,68 @@ $container-width: 425px;
   width: $container-width;
   margin: 0 auto;
   background: #fff;
+}
+
+.header-block {
+  &__background {
+    background: var(--ion-color-primary-shade);
+    height: 144px;
+    position: relative;
+    background: url('../assets/images/cover.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__dp {
+    position: absolute;
+    bottom: -44px;
+    left: calc(50% - 60px);
+    height: 120px;
+    width: 120px;
+    border: 2px solid rgb(239 239 239);
+    padding: .5px;
+    border-radius: 50%;
+  }
+}
+
+
+.about {
+  padding: 0 $container-padding;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__dp {
+    margin-right: 8px;
+    flex: 1 1 88px;
+    max-width: 88px;
+  }
+
+  &__dp_img {
+    border: .5px solid rgb(239 239 239);
+    padding: .5px;
+    height: 80px;
+    width: 80px;
+  }
+
+  &__display-1 {
+    //font-size: 1.6rem;
+    margin: 16px 0 0;
+    //font-weight: 400;
+    font-weight: lighter;
+    color: #4d4d4d;
+  }
+
+  &__headline {
+    font-weight: lighter;
+  }
+
+  p {
+    letter-spacing: 1px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
