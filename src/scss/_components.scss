@@ -64,14 +64,14 @@ $container-padding: 16px;
 
   &__display-1 {
     //font-size: 1.6rem;
-    margin: 16px 0 0;
+    margin: 16px 0 0 !important;
     //font-weight: 400;
-    font-weight: lighter;
+    font-weight: lighter !important;
     color: #4d4d4d;
   }
 
   &__headline {
-    font-weight: lighter;
+    font-weight: lighter !important;
   }
 
   p {
