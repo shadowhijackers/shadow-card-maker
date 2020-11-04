@@ -1,3 +1,42 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon  src="assets/icon/mark_email_unread-24px.svg" slot="start"></ion-icon>
+          <ion-label>INBOX</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon src="assets/icon/person-24px.svg"  slot="start"></ion-icon>
+          <ion-label>PROFILE</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon src="assets/icon/architecture-24px.svg" slot="start"></ion-icon>
+          <ion-label>STUDIO</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon src="assets/icon/visibility-24px.svg" slot="start"></ion-icon>
+          <ion-label>PREVIEW</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>LOGOUT</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
 </ion-app>
