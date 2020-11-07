@@ -1,4 +1,20 @@
 <form>
+  <section id="image-form__block">
+    <img *ngFor="let uploadedImage of uploadedFiles" [src]="uploadedImage" alt="image">
+
+    <p class="ion-text-center">No images uploaded yet!</p>
+
+    <div fxLayout="row-reverse">
+      <ion-button expand="full" (click)="uploadImageInRef.click()">
+        <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+        <ion-label slot="end">ADD Image</ion-label>
+      </ion-button>
+
+      <input class="ion-hide" #uploadImageInRef type="file" (change)="loadImageFromDevice($event)" id="file-input"
+             accept="image/png, image/jpeg" multiple>
+    </div>
+  </section>
+
   <mat-form-field class="form-field" appearance="standard">
     <mat-label>VIDEO LINK</mat-label>
     <input matInput type="email" placeholder="nom@exemple.fr">
