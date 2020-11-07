@@ -2,6 +2,11 @@
   <header class="header-block">
     <div class="header-block__background header-block_cover">
       <ion-button (click)="uploadCoverImageInRef.click()" class="header-block__upload-btn">UPLOAD</ion-button>
+      <img *ngIf="coverImage; else noCover" class="about__dp_img" [src]="coverImage?.imgURL" alt="LOGO">
+
+      <ng-template #noCover>
+        <img class="cover_img" src="assets/images/cover.png" alt="LOGO">
+      </ng-template>
 
       <input class="ion-hide" #uploadCoverImageInRef type="file" (change)="loadCoverImageFromDevice($event)"
              accept="image/png, image/jpeg" multiple>
@@ -11,7 +16,11 @@
   <section class="about maker-container">
     <div class="about__header">
       <div class="about__dp">
-        <img class="about__dp_img" src="assets/images/logo_1024x2024.png" alt="LOGO">
+        <img *ngIf="logoImage; else noLogo" class="about__dp_img" [src]="logoImage?.imgURL" alt="LOGO">
+
+        <ng-template #noLogo>
+          <img class="about__dp_img" src="assets/images/logo_1024x2024.png" alt="LOGO">
+        </ng-template>
       </div>
 
       <ion-button (click)="uploadLogoInRef.click()">UPLOAD</ion-button>
