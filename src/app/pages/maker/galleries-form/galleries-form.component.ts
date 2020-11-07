@@ -17,8 +17,8 @@ export class GalleriesFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  trackByFn(value: UploadedImage, index: number){
-    return index;
+  trackByFn(value: any){
+    return value.id as any;
   }
 
   loadImageFromDevice(event: Event | any) {
