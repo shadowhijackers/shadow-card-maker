@@ -1,3 +1,35 @@
-.item-inner{
-  border: 0;
+::ng-deep {
+  figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: 8px auto;
+    position: relative;
+
+    .image-clear-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+  }
+
+
+  figcaption {
+    background-color: #f4f5f8;
+    color: #444;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+
+
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+      padding-bottom: .2rem !important;
+    }
+
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+      bottom: 0.25em !important;
+    }
+  }
 }

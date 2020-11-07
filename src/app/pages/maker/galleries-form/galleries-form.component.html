@@ -1,8 +1,21 @@
 <form>
   <section id="image-form__block">
-    <img *ngFor="let uploadedImage of uploadedFiles" [src]="uploadedImage" alt="image">
+    <figure *ngFor="let uploadedImage of uploadedFiles;trackBy: trackByFn;let idx=index">
+      <button (click)="clearUploadedImg(uploadedImage, idx)" class="image-clear-btn" mat-icon-button>
+        <mat-icon>clear</mat-icon>
+      </button>
 
-    <p class="ion-text-center">No images uploaded yet!</p>
+      <img [src]="uploadedImage.imgURL" alt="image">
+
+      <figcaption>
+        <mat-form-field class="form-field">
+          <mat-label>Enter Caption</mat-label>
+          <input type="text" [value]="uploadedImage.caption"  matInput>
+        </mat-form-field>
+      </figcaption>
+    </figure>
+
+    <p class="ion-text-center" *ngIf="!uploadedFiles?.length">No images uploaded yet!</p>
 
     <div fxLayout="row-reverse">
       <ion-button expand="full" (click)="uploadImageInRef.click()">
@@ -16,7 +29,7 @@
   </section>
 
   <mat-form-field class="form-field" appearance="standard">
-    <mat-label>VIDEO LINK</mat-label>
+    <mat-label>ENTER VIDEO LINK</mat-label>
     <input matInput type="email" placeholder="nom@exemple.fr">
   </mat-form-field>
 </form>
