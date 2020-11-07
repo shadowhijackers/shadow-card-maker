@@ -1,3 +1,37 @@
-<p>
-  bussiness-info-form works!
-</p>
+<form>
+  <header class="header-block">
+    <div class="header-block__background header-block_cover">
+      <ion-button class="header-block__upload-btn">UPLOAD</ion-button>
+    </div>
+  </header>
+
+  <section class="about maker-container">
+    <div class="about__header">
+      <div class="about__dp">
+        <img class="about__dp_img" src="assets/images/logo_1024x2024.png" alt="LOGO">
+      </div>
+      <ion-button>UPLOAD</ion-button>
+    </div>
+  </section>
+
+  <section>
+    <mat-form-field class="form-field" appearance="standard">
+      <mat-label>DISPLAY NAME</mat-label>
+      <input matInput type="email" placeholder="nom@exemple.fr">
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="standard">
+      <mat-label>HEAD LINE</mat-label>
+      <input matInput type="email" placeholder="nom@exemple.fr">
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="standard">
+      <mat-label>DESCRIPTION</mat-label>
+      <textarea matInput type="text" placeholder="Enter the message" required rows="4"></textarea>
+      <button mat-button matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+  </section>
+</form>
