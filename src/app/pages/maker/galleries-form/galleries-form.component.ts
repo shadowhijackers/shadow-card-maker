@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {UploadedImage} from "../../../core/models/uploaded.image";
 
 @Component({
   selector: 'app-galleries-form',
@@ -53,8 +54,3 @@ export class GalleriesFormComponent implements OnInit {
   }
 }
 
-export interface UploadedImage {
-  imgURL: any;
-  caption: string;
-  id: string;
-}

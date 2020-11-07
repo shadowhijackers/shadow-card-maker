@@ -1,7 +1,10 @@
 <form>
   <header class="header-block">
     <div class="header-block__background header-block_cover">
-      <ion-button class="header-block__upload-btn">UPLOAD</ion-button>
+      <ion-button (click)="uploadCoverImageInRef.click()" class="header-block__upload-btn">UPLOAD</ion-button>
+
+      <input class="ion-hide" #uploadCoverImageInRef type="file" (change)="loadCoverImageFromDevice($event)"
+             accept="image/png, image/jpeg" multiple>
     </div>
   </header>
 
@@ -10,7 +13,10 @@
       <div class="about__dp">
         <img class="about__dp_img" src="assets/images/logo_1024x2024.png" alt="LOGO">
       </div>
-      <ion-button>UPLOAD</ion-button>
+
+      <ion-button (click)="uploadLogoInRef.click()">UPLOAD</ion-button>
+      <input class="ion-hide" #uploadLogoInRef type="file" (change)="loadImageFromDevice($event)"
+             accept="image/png, image/jpeg" multiple>
     </div>
   </section>
 
