@@ -13,6 +13,7 @@ import { MakerPageRoutingModule } from './maker-routing.module';
 import { MakerPage } from './maker.page';
 import * as MakerForms from './'
 import {MatStepperModule} from "@angular/material/stepper";
+import {FlexModule} from "@angular/flex-layout";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatStepperModule
+    MatStepperModule,
+    FlexModule
   ],
   declarations: [
     MakerPage,

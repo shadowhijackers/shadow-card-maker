@@ -14,35 +14,42 @@
   <div class="my-app">
     <div class="container maker-container">
 
-      <app-bussiness-info-form></app-bussiness-info-form>
+      <mat-horizontal-stepper>
+        <mat-step>
+          <app-bussiness-info-form></app-bussiness-info-form>
 
-      <section>
-        <mat-form-field class="form-field" appearance="standard">
-          <mat-label>PHONE NO</mat-label>
-          <input matInput type="email" placeholder="nom@exemple.fr">
-        </mat-form-field>
+          <div fxLayout="row-reverse">
+            <button mat-button matStepperNext>NEXT</button>
+          </div>
+        </mat-step>
 
-        <mat-form-field class="form-field" appearance="standard">
-          <mat-label>WHATSAPP NO</mat-label>
-          <input matInput type="email" placeholder="nom@exemple.fr">
-        </mat-form-field>
+        <mat-step>
+          <app-contact-form></app-contact-form>
 
-        <mat-form-field class="form-field" appearance="standard">
-          <mat-label>E-MAIL</mat-label>
-          <input matInput type="email" placeholder="nom@exemple.fr">
-        </mat-form-field>
+          <div fxLayout="row-reverse">
+            <button fxFlexOrder="1" mat-button matStepperPrevious>BACK</button>
+            <button fxFlexOrder="0" mat-button matStepperNext>NEXT</button>
+          </div>
+        </mat-step>
 
-        <mat-form-field class="form-field" appearance="standard">
-          <mat-label>ADDRESS</mat-label>
-          <input matInput type="email" placeholder="nom@exemple.fr">
-        </mat-form-field>
+        <mat-step>
+          <app-galleries-form></app-galleries-form>
 
-        <mat-form-field class="form-field" appearance="standard">
-          <mat-label>WEBSITE</mat-label>
-          <input matInput type="email" placeholder="nom@exemple.fr">
-        </mat-form-field>
+          <div fxLayout="row-reverse">
+            <button fxFlexOrder="1" mat-button matStepperPrevious>BACK</button>
+            <button fxFlexOrder="0" mat-button matStepperNext>NEXT</button>
+          </div>
+        </mat-step>
 
-      </section>
+        <mat-step>
+          <app-others-form></app-others-form>
+
+          <div fxLayout="row-reverse">
+            <button fxFlexOrder="1" mat-button matStepperPrevious>BACK</button>
+            <button fxFlexOrder="0" mat-button matStepperNext>NEXT</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
     </div>
   </div>
 </ion-content>
